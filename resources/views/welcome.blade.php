@@ -20,7 +20,7 @@
                     Anda mendapatkan manfaat maksimal dari kopi Anda.</p>
             </div>
             <div style="grid-area: button">
-                <a href="">  {{-- {{ route('login') }} --}}
+                <a href="{{ route('login') }}"> 
                     <button class="bg-[#1C3F3A] text-[#edebe4] font-semibold text-[130%] px-20 py-5 rounded-[35px]">Mulai sekarang</button>
                 </a>
             </div>
@@ -68,7 +68,7 @@
                         <h1 class="font-bold text-[250%]">Petani</h1>
                         <p class="text-[130%] pt-8"> <span class="font-semibold">Harga tertinggi</span> <br> Terima penawaran dari berbagai pengepul dan pilih yang terbaik.</p>
                         <p class="text-[130%] pt-8"> <span class="font-semibold">Cakupan luas</span> <br>Jangkau pengepul dari berbagai wilayah, tanpa perantara.</p>
-                        <a href=""> {{-- {{ route('register') }} --}}
+                        <a href="{{ route('register') }}">
                             <button class="bg-[#54473F] text-[130%] text-white font-semibold px-10 py-4 mt-10 ml-64 rounded-[30px]">Jual kopi sekarang ></button>
                         </a>
                     </div>
@@ -76,7 +76,7 @@
                         <h1 class="font-bold text-[250%]">Pengepul</h1>
                         <p class="text-[130%] pt-8"> <span class="font-semibold">Akses langsung</span> <br>Terhubung dengan petani dari daerah penghasil kopi terbaik di Indonesia.</p>
                         <p class="text-[130%] pt-8"> <span class="font-semibold">Efisiensi waktu</span> <br>Hemat waktu dengan proses negosiasi yang cepat dan transparan.</p>
-                        <a href=""> {{-- {{ route('register') }} --}}
+                        <a href="{{ route('register') }}">
                             <button class="bg-white text-[130%] text-[#54473F] font-semibold px-10 py-4 mt-10 ml-64 rounded-[30px]">Cari kopi sekarang ></button>
                         </a>
                     </div>
@@ -139,7 +139,7 @@
             <div class="px-14 py-4">
                 <h1 class="text-white text-[300%] font-semibold">Ubah cara Anda jual dan <br> beli kopi</h1>
                 <p class="text-white text-[130%] pt-5">untuk mendapatkan pengalaman jual beli <br> kopi terbaik.</p>
-                <a href=""> {{-- {{ route('login') }} --}}
+                <a href="{{ route('login') }}">
                     <button class="bg-white text-[130%] text-[#1C3F3A] font-semibold px-10 py-4 mt-5 ml-96 rounded-[30px]">Mulai sekarang ></button>
                 </a>
             </div>

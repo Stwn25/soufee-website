@@ -49,9 +49,9 @@ class AuthController extends Controller
             // Redirect berdasarkan role user
             $role = Auth::user()->role;
             if ($role === 'pengepul') {
-                return redirect()->route('homepage-pengepul');
+                return redirect()->route('dashboard-pengepul');
             } elseif ($role === 'petani') {
-                return redirect()->route('homepage-petani');
+                return redirect()->route('dashboard-petani');
             }
             else {
               Auth::logout();
