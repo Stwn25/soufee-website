@@ -32,6 +32,8 @@ class AuthController extends Controller
             // 'telephone =' => $request->telephone,
             'password' => Hash::make($request->password),
         ]);
+
+        return redirect()->route('login')->with('success', 'Registrasi berhasil! Silakan login.');
     }
 
     public function login_proses(Request $request) { 
@@ -53,18 +55,11 @@ class AuthController extends Controller
             } elseif ($role === 'petani') {
                 return redirect()->route('dashboard-petani');
             }
-            else {
-              Auth::logout();
-              return redirect()->route('login')->with('error', 'Role tidak dikenali. Silakan hubungi admin.');
-            }
-            // Jika role tidak dikenali, logout dan kembali ke login
         }
         // Jika autentikasi gagal
         return redirect()->route('login')->with('error', 'Email atau password salah!');
     }
     
-    
-
     public function logout(){
         Auth::logout();
         return redirect()->route('login');

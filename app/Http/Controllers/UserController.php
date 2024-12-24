@@ -11,7 +11,17 @@ use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
+    //Pengepul side
+    public function dashboard_pengepul(){
+        return view('pages.pengepul.dashboard');
+    }
+
+    //Petani side
     public function dashboard_petani(){
-        return view('pages.petani.home');
+        return view('pages.petani.dashboard');
+    }
+
+    public function penjemputan(){
+        return view('pages.petani.penjemputan');
     }
 }

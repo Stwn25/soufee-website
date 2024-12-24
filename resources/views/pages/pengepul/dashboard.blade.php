@@ -1,7 +1,17 @@
-@extends('layouts.petani_layouts.app')
+@extends('layouts.pengepul_layouts.app')
 @section('content')
+    
+<div class="w-full flex justify-between  items-center">
+    <p>Atur kapasitas Anda disini.</p>
+    <form action="" class="flex gap-2 py-2 px-3 bg-[#1C3F3A] rounded-xl">
+        <img src="{{ asset('img/tabler_plus.svg') }}" alt="">
+        <button type="submit" class="font-medium text-white">Tambah Kapasitas</button>
+    </form>
+</div>
 
-<h1>halo</h1>
+<div class="w-full border border-black">
+    <h1>haloo</h1>
+</div>
 
 <script>
     const btkatalog = document.querySelector('#bt-katalog');
@@ -25,23 +35,23 @@
     const isiRiwayat = document.querySelector('#isi-riwayat');
     const isiPenjemputan = document.querySelector('#isi-penjemputan');
 
-    btpenjemputan.style.backgroundColor = '#1C3F3A';
-    tekspenjemputan.style.color = '#edebe4';
-    penjemputan1.style.display = 'none';
-    penjemputan2.style.display = 'block';
+    btkatalog.style.backgroundColor = '#1C3F3A';
+    tekskatalog.style.color = '#edebe4';
+    katalog1.style.display = 'none';
+    katalog2.style.display = 'block';
 
-    btkatalog.style.backgroundColor = '#edebe4';
-    tekskatalog.style.color = '#1C3F3A';
-    katalog1.style.display = 'block';
-    katalog2.style.display = 'none';
+    btpenjemputan.style.backgroundColor = '#edebe4';
+    tekspenjemputan.style.color = '#1C3F3A';
+    penjemputan1.style.display = 'block';
+    penjemputan2.style.display = 'none';
 
     btriwayat.style.backgroundColor = '#edebe4';
     teksriwayat.style.color = '#1C3F3A';
     riwayat1.style.display = 'block';
     riwayat2.style.display = 'none';
 
-    isiKatalog.style.display = 'none';
+    isiKatalog.style.display = 'block';
     isiRiwayat.style.display = 'none';
-    isiPenjemputan.style.display = 'block';
+    isiPenjemputan.style.display = 'none';
 </script>
 @endsection

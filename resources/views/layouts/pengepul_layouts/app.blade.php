@@ -45,13 +45,13 @@
 </head>
 
 <body class="bg-[#edebe4]" style="font-family: 'Montserrat', sans-serif;">
-    @include('layouts.petani_layouts.header')
+    @include('layouts.pengepul_layouts.header')
     {{-- @include('Petani.layouts.sidebar') --}}
-    <div class="w-full mt-28 px-2 grid grid-cols-[0.22fr_1fr] gap-16">
+    <div class="w-full mt-32 px-2 grid grid-cols-[0.22fr_1fr] gap-8">
         {{-- Sidebar --}}
-        @include('layouts.petani_layouts.sidebar')
+        @include('layouts.pengepul_layouts.sidebar')
         <!-- Content -->
-        <div class=" border-l border-[#dadada]">
+        <div class=" border-l-2 border-[#d7d7d7] px-8 flex flex-col gap-4">
             @yield('content')
         </div>
     </div>
