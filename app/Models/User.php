@@ -49,4 +49,8 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function kapasitas(){
+        return $this->hasMany(Kapasitas::class, 'id_user', 'id_user');
+    }
 }

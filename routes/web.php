@@ -3,6 +3,7 @@
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\KapasitasController;
 
 
 //Landing Pages
@@ -13,7 +14,7 @@ Route::get('/', function () {
 //Auth Pages
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::get('/register', [AuthController::class, 'register'])->name('register');
-Route::post('/login/proses', [AuthController::class, 'login_proses'])->name('login-proses');
+Route::post('/login-proses', [AuthController::class, 'login_proses'])->name('login-proses');
 Route::get('/register/proses', [AuthController::class, 'register_proses'])->name('register-proses');
 Route::get('/logout',[AuthController::class, 'logout'])->name('logout');
 
@@ -32,7 +33,8 @@ Route::group(['middleware' => ['auth']], function () {
 
 //Pages dengan authentikasi sebagai Pengepul
 Route::middleware(['role:pengepul'])->group(function () {
-    
+    Route::get('/create-kapasitas', [KapasitasController::class, 'create_kapasitas'])->name('create-kapasitas');
+    Route::post('/store-kapasitas', [KapasitasController::class, 'store_kapasitas'])->name('store-kapasitas');
 }); 
 
 //Pages dengan authentikasi sebagai Petani

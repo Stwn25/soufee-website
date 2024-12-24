@@ -3,14 +3,20 @@
     
 <div class="w-full flex justify-between  items-center">
     <p>Atur kapasitas Anda disini.</p>
-    <form action="" class="flex gap-2 py-2 px-3 bg-[#1C3F3A] rounded-xl">
-        <img src="{{ asset('img/tabler_plus.svg') }}" alt="">
-        <button type="submit" class="font-medium text-white">Tambah Kapasitas</button>
-    </form>
+    <a href="{{ route('create-kapasitas') }}">
+        <div class="flex gap-2 py-2 px-3 bg-[#1C3F3A] rounded-xl">
+            <img src="{{ asset('img/tabler_plus.svg') }}" alt="">
+            <button type="submit" class="font-medium text-white">Tambah Kapasitas</button>
+        </div>
+    </a>
 </div>
 
 <div class="w-full border border-black">
-    <h1>haloo</h1>
+    @foreach ($kapasitas as $item)
+        <h1>{{ $item->kapasitas }}</h1>
+        <h1>{{ $item->deskripsi }}</h1>
+        
+    @endforeach
 </div>
 
 <script>

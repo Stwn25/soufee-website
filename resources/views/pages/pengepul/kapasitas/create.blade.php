@@ -1,17 +1,12 @@
 @extends('layouts.pengepul_layouts.app')
 @section('content')
     
-<div class="w-full flex justify-between  items-center">
-    <p>Atur kapasitas Anda disini.</p>
-    <form action="" class="flex gap-2 py-2 px-3 bg-[#1C3F3A] rounded-xl">
-        <img src="{{ asset('img/tabler_plus.svg') }}" alt="">
-        <button type="submit" class="font-medium text-white">Tambah Kapasitas</button>
-    </form>
-</div>
-
-<div class="w-full border border-black">
-    <h1>haloo</h1>
-</div>
+<form action="{{ route('store-kapasitas') }}" method="POST">
+    @csrf
+    <input type="number" name="kapasitas" placeholder="kapasitas">
+    <input type="text" name="deskripsi" id="">
+    <button type="submit"> selesai</button>
+</form>
 
 <script>
     const btkatalog = document.querySelector('#bt-katalog');
