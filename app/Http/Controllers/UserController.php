@@ -17,8 +17,13 @@ class UserController extends Controller
     public function dashboard_pengepul(){
         //Memunculkan data kapasitas sesuai dengan user yang login
         $id = Auth::user()->id_user;
-        $kapasitas = Kapasitas::where('id_user', $id)->get();   
+        $kapasitas = Kapasitas::where('id_user', $id)
+                    ->with('jenis_kopis')
+                    ->get();   
 
+        // dd($kapasitas);
+
+        
         return view('pages.pengepul.dashboard', compact('kapasitas'));
     }
 

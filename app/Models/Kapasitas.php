@@ -14,11 +14,16 @@ class Kapasitas extends Model
 
     protected $fillable = [
         'id_user',
+        'id_jenis_kopi',
         'kapasitas',
         'deskripsi',
     ];
 
     public function users(){
         return $this->belongsTo(User::class, 'id_user', 'id_user');
+    }
+
+    public function jenis_kopis(){
+        return $this->belongsTo(JenisKopi::class, 'id_jenis_kopi', 'id_jenis_kopi');
     }
 }

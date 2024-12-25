@@ -3,6 +3,11 @@
     
 <form action="{{ route('store-kapasitas') }}" method="POST">
     @csrf
+    <select name="id_jenis_kopi" id="">
+        @foreach ($jeniskopi as $namajenis )
+            <option value="{{ $namajenis->id_jenis_kopi }}">{{ $namajenis->nama_jenis }}</option>
+        @endforeach
+    </select>
     <input type="number" name="kapasitas" placeholder="kapasitas">
     <input type="text" name="deskripsi" id="">
     <button type="submit"> selesai</button>

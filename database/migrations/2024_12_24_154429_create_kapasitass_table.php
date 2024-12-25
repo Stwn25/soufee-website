@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('kapasitass', function (Blueprint $table) {
             $table->id('id_kapasitas');
             $table->foreignId('id_user')->constrained('users', 'id_user')->onDelete('cascade');
+            $table->bigInteger('id_jenis_kopi')->constrained('jenis_kopis', 'id_jenis_kopi')->onDelete('cascade');
             $table->integer('kapasitas');
             $table->string('deskripsi');
             $table->timestamps();

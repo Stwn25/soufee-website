@@ -15,7 +15,7 @@
     @foreach ($kapasitas as $item)
         <h1>{{ $item->kapasitas }}</h1>
         <h1>{{ $item->deskripsi }}</h1>
-        
+        <h1>{{ $item->jenis_kopis->nama_jenis}}</h1>
     @endforeach
 </div>
 
