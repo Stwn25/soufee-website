@@ -33,8 +33,14 @@ Route::group(['middleware' => ['auth']], function () {
 
 //Pages dengan authentikasi sebagai Pengepul
 Route::middleware(['role:pengepul'])->group(function () {
+    //Kapasitas
     Route::get('/create-kapasitas', [KapasitasController::class, 'create_kapasitas'])->name('create-kapasitas');
     Route::post('/store-kapasitas', [KapasitasController::class, 'store_kapasitas'])->name('store-kapasitas');
+    Route::get('/update-kapasitas/{kapasitas}', [KapasitasController::class, 'update_kapasitas'])->name('update-kapasitas');
+    Route::put('/update-kapasitas/{kapasitas}', [KapasitasController::class, 'update_kapasitas_proses'])->name('update-kapasitas-proses');  
+    Route::delete('/delete-kapasitas/{kapasitas}', [KapasitasController::class, 'delete_kapasitas'])->name('delete-kapasitas');
+
+    //
 }); 
 
 //Pages dengan authentikasi sebagai Petani

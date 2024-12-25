@@ -1,36 +1,26 @@
 @extends('layouts.pengepul_layouts.app')
 @section('content')
     
-<div class="w-full flex justify-between  items-center">
-    <p>Kapasitas yang Anda miliki.</p>
-    <a href="{{ route('create-kapasitas') }}">
-        <div class="flex gap-2 py-2 px-3 bg-[#1C3F3A] rounded-xl">
-            <img src="{{ asset('img/tabler_plus.svg') }}" alt="">
-            <button type="submit" class="font-medium text-white">Tambah Kapasitas</button>
-        </div>
-    </a>
-</div>
+<form action="{{ route('update-kapasitas-proses', $kapasitas->id_kapasitas) }}" method="POST" class="flex flex-col">
+    @csrf
+    @method('PUT')
+    <label for="id_jenis_kopi" class="font-semibold">Jenis Kopi</label>
+    <select name="id_jenis_kopi" id="id_jenis_kopi" class="border-0 px-8 py-2 rounded-xl mb-4">
+        @foreach ($jeniskopi as $namajenis )
+            <option value="{{ $namajenis->id_jenis_kopi }}" {{ $namajenis->id_jenis_kopi == $kapasitas->id_jenis_kopi ? 'selected' : '' }}> {{ $namajenis->nama_jenis }} </option>
+        @endforeach
+    </select>
 
-<div class="w-full grid grid-cols-4 gap-2 border border-black">
-    @foreach ($kapasitas as $item)
-    <div class="rounded-md border-1 border-[#1C3F3A] p-1">
-        <div>
-            <img src="{{ asset('img/coffe-bean-img.jpg') }}" alt="kopi" class="rounded-md">
-        </div>
-        <div>
-            <h1>{{ $item->kapasitas }} kg</h1>
-            <h1>{{ $item->deskripsi }}</h1>
-            <h1>{{ $item->jenis_kopis->nama_jenis}}</h1>
-            <a href="{{ route('update-kapasitas', $item->id_kapasitas) }}">update</a>
-            <form action="{{ route('delete-kapasitas', $item->id_kapasitas) }}" method="POST">
-                @method('DELETE')
-                @csrf
-                <button type="submit">Delete</button>
-            </form>
-        </div>
+    <label for="kapasitas" class="font-semibold">Kapasitas</label>
+    <input type="number" name="kapasitas" id="kapasitas" placeholder="Masukkan besar kapasitas" value="{{ $kapasitas->kapasitas }}" class="mb-4 border-0 px-8 py-2 rounded-xl">
+
+    <label for="deskripsi" class="font-semibold">Deskripsi</label>
+    <input type="text" name="deskripsi" id="deskripsi" placeholder="Masukkan deskripsi kapasitas" value="{{ $kapasitas->deskripsi }}" class="mb-4 border-0 px-8 py-2 rounded-xl">
+    <div class="absolute right-4 bottom-0">
+        <a href="{{ route('dashboard-pengepul') }}" class="px-16 py-3 text-[#1C3F3A] border-2 border-[#1C3F3A] font-semibold rounded-md">Batal</a>
+        <button type="submit" class="px-16 py-3 bg-[#1C3F3A] font-semibold text-[#edebe4] rounded-md">Tambah</button>
     </div>
-    @endforeach
-</div>
+</form>
 
 <script>
     const btkatalog = document.querySelector('#bt-katalog');

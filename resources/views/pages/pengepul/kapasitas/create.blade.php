@@ -1,16 +1,24 @@
 @extends('layouts.pengepul_layouts.app')
 @section('content')
     
-<form action="{{ route('store-kapasitas') }}" method="POST">
+<form action="{{ route('store-kapasitas') }}" method="POST" class="flex flex-col">
     @csrf
-    <select name="id_jenis_kopi" id="">
+    <label for="id_jenis_kopi" class="font-semibold">Jenis Kopi</label>
+    <select name="id_jenis_kopi" id="id_jenis_kopi" class="border-0 px-8 py-2 rounded-xl mb-4">
         @foreach ($jeniskopi as $namajenis )
             <option value="{{ $namajenis->id_jenis_kopi }}">{{ $namajenis->nama_jenis }}</option>
         @endforeach
     </select>
-    <input type="number" name="kapasitas" placeholder="kapasitas">
-    <input type="text" name="deskripsi" id="">
-    <button type="submit"> selesai</button>
+
+    <label for="kapasitas" class="font-semibold">Kapasitas</label>
+    <input type="number" name="kapasitas" id="kapasitas" placeholder="Masukkan besar kapasitas" class="mb-4 border-0 px-8 py-2 rounded-xl">
+
+    <label for="deskripsi" class="font-semibold">Deskripsi</label>
+    <input type="text" name="deskripsi" id="deskripsi" placeholder="Masukkan deskripsi kapasitas" class="mb-4 border-0 px-8 py-2 rounded-xl">
+    <div class="absolute right-4 bottom-0">
+        <a href="{{ route('dashboard-pengepul') }}" class="px-16 py-3 text-[#1C3F3A] border-2 border-[#1C3F3A] font-semibold rounded-md">Batal</a>
+        <button type="submit" class="px-16 py-3 bg-[#1C3F3A] font-semibold text-[#edebe4] rounded-md">Tambah</button>
+    </div>
 </form>
 
 <script>

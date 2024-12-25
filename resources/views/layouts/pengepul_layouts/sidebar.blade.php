@@ -1,9 +1,9 @@
         <!-- Sidebar -->
         <div class="h-full ml-2">
-            <div class="gap-3 flex flex-col sticky min-h-[82vh]">
+            <div class="gap-3 flex flex-col sticky top-32 min-h-[82vh]">
                 <h1 class="text-[#a2a2a2]" style="font-family: Montserrat, 'sans-serif';">Menu</h1>
 
-                <!-- Link Katalog -->
+                <!-- Link Gudang -->
                 <a href=""> 
                     <div class="bg-[#edebe4] cursor-pointer px-4 py-2 rounded-xl border-2 border-[#1C3F3A] flex items-center gap-8" id="bt-katalog">
                         <img src="{{ asset('img/streamline_coffee-bean-1.svg') }}" id="img-katalog-1" alt="">
