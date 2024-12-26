@@ -11,8 +11,8 @@
         @endforeach
     </select>
 
-    <label for="kapasitas" class="font-semibold">Kapasitas</label>
-    <input type="number" name="kapasitas" id="kapasitas" placeholder="Masukkan besar kapasitas" value="{{ $kapasitas->kapasitas }}" class="mb-4 border-0 px-8 py-2 rounded-xl">
+    <label for="kapasitas" class="font-semibold">Kapasitas Maksimum</label>
+    <input type="number" name="kapasitas_maksimum" id="kapasitas" placeholder="Masukkan besar kapasitas" value="{{ $kapasitas->kapasitas_maksimum }}" class="mb-4 border-0 px-8 py-2 rounded-xl">
 
     <label for="deskripsi" class="font-semibold">Deskripsi</label>
     <input type="textarea" name="deskripsi" id="deskripsi" placeholder="Masukkan deskripsi kapasitas" value="{{ $kapasitas->deskripsi }}" class="mb-4 border-0 px-8 py-2 rounded-xl">

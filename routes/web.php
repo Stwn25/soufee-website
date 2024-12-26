@@ -52,5 +52,5 @@ Route::middleware(['role:pengepul'])->group(function () {
 
 //Pages dengan authentikasi sebagai Petani
 Route::middleware(['role:petani'])->group(function () {
-    Route::get('/penjemputan',[UserController::class, 'penjemputan'])->name('penjemputan-petani');
+    
 });

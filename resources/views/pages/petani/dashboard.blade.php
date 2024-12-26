@@ -1,7 +1,27 @@
 @extends('layouts.petani_layouts.app')
 @section('content')
     
+<div>
+    <h1>bagian per filteran</h1>
+</div>
 
+<div class="w-full grid grid-cols-4 gap-4 pb-4">
+    @foreach ($kapasitas as $item)
+    <div class="rounded-xl shadow-md overflow-hidden relative z-1">
+        <div>
+            <img src="{{ asset('img/coffe-bean-img.jpg') }}" alt="kopi">
+        </div>
+        <div class="p-2">
+            <p class="font-bold text-xl">{{ $item->kapasitas }} kg</p>
+            <p class="text-gray-400">{{ $item->jenis_kopis->nama_jenis}}</p>
+            <p class="mb-16">{{ \Illuminate\Support\Str::limit($item->deskripsi, 50) }}</p>
+            <div class="flex gap-2 absolute bottom-4 right-1.5">
+                
+            </div>
+        </div>
+    </div>
+    @endforeach
+</div>
 
 <script>
     const btkatalog = document.querySelector('#bt-katalog');

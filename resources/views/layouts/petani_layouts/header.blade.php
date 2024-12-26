@@ -1,4 +1,4 @@
-<header class="w-full flex justify-center fixed top-0 z-40 bg-[#edebe4]">
+<header class="w-full flex justify-center fixed top-0 z-40 bg-[#edebe4] border-b-2 border-[#d7d7d7]">
     <nav class="w-[1540px] px-4 py-6 grid grid-cols-[0.2fr_1fr_0.15fr] items-center justify-between">
         <div class="flex justify-center items-center">
             <a href="#"><h2 class="text-3xl font-bold text-[#1C3F3A]" style="font-family: 'Montserrat', sans-serif;">Soufee</h2></a>

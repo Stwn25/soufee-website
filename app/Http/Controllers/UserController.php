@@ -19,20 +19,15 @@ class UserController extends Controller
         $id = Auth::user()->id_user;
         $kapasitas = Kapasitas::where('id_user', $id)
                     ->with('jenis_kopis')
-                    ->get();   
-
-        // dd($kapasitas);
-
+                    ->get();
         
         return view('pages.pengepul.dashboard', compact('kapasitas'));
     }
 
     //Petani side
     public function dashboard_petani(){
-        return view('pages.petani.dashboard');
+        $kapasitas = Kapasitas::with('jenis_kopis')->get();  
+        return view('pages.petani.dashboard', compact('kapasitas'));
     }
-
-    public function penjemputan(){
-        return view('pages.petani.penjemputan');
-    }
+ 
 }

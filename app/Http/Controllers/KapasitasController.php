@@ -21,7 +21,8 @@ class KapasitasController extends Controller
         Kapasitas::create([
             'id_user' => $id,
             'id_jenis_kopi' => $request->id_jenis_kopi,
-            'kapasitas' => $request->kapasitas,
+            'kapasitas_maksimum' => $request->kapasitas,
+            'kapasitas_terbaru' => $request->kapasitas,
             'deskripsi' => $request->deskripsi,
         ]);
 
@@ -38,7 +39,8 @@ class KapasitasController extends Controller
         $kapasitas->update([
             'id_kapasitas' => $kapasitas->id_kapasitas,
             'id_jenis_kopi' => $request->id_jenis_kopi,
-            'kapasitas' => $request->kapasitas,
+            'kapasitas_maksimum' => $request->kapasitas_maksimum,
+            'kapasitas_terbaru' => ($request->kapasitas_maksimum - $kapasitas->kapasitas_maksimum) + $kapasitas->kapasitas_terbaru,
             'deskripsi' => $request->deskripsi,
         ]);
 

@@ -12,8 +12,8 @@
 </div>
     
 <div>
-    <table class="w-full text-center border-1">
-        <thead class="pb-5">
+    <table class="w-full text-center mt-2">
+        <thead>
             <tr class="border-b-2 border-[#d9d9d9]">
                 <th>Nama Pegawai</th>
                 <th>Nomor Telepon</th>
