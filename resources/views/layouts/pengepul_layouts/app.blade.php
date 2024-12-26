@@ -57,28 +57,4 @@
     </div>
 </body>
 
-<script>
-    const btkatalog = document.querySelector('#bt-katalog');
-    const btriwayat = document.querySelector('#bt-riwayat');
-    const btpenjemputan = document.querySelector('#bt-penjemputan');
-
-    const tekskatalog = document.querySelector('#teks-katalog');
-    const teksriwayat = document.querySelector('#teks-riwayat');
-    const tekspenjemputan = document.querySelector('#teks-penjemputan');
-
-    const penjemputan1 = document.querySelector('#img-truk-1');
-    const penjemputan2 = document.querySelector('#img-truk-2');
-
-    const katalog1 = document.querySelector('#img-katalog-1');
-    const katalog2 = document.querySelector('#img-katalog-2');
-
-    const riwayat1 = document.querySelector('#img-riwayat-1');
-    const riwayat2 = document.querySelector('#img-riwayat-2');
-
-    const isiKatalog = document.querySelector('#isi-katalog');
-    const isiRiwayat = document.querySelector('#isi-riwayat');
-    const isiPenjemputan = document.querySelector('#isi-penjemputan');
-</script>
-  
-
 </html>

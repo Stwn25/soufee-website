@@ -4,6 +4,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\KapasitasController;
+use App\Http\Controllers\PegawaiController;
 
 
 //Landing Pages
@@ -40,7 +41,13 @@ Route::middleware(['role:pengepul'])->group(function () {
     Route::put('/update-kapasitas/{kapasitas}', [KapasitasController::class, 'update_kapasitas_proses'])->name('update-kapasitas-proses');  
     Route::delete('/delete-kapasitas/{kapasitas}', [KapasitasController::class, 'delete_kapasitas'])->name('delete-kapasitas');
 
-    //
+    //Pegawai
+    Route::get('/data-pegawai', [PegawaiController::class, 'index'])->name('data-pegawai');
+    Route::get('/create-pegawai', [PegawaiController::class, 'create_pegawai'])->name('create-pegawai');
+    Route::post('/store-pegawai', [PegawaiController::class, 'store_pegawai'])->name('store-pegawai');
+    Route::get('/update-pegawai/{pegawai}', [PegawaiController::class, 'update_pegawai'])->name('update-pegawai');
+    Route::put('/update-pegawai/{pegawai}', [PegawaiController::class, 'update_pegawai_proses'])->name('update-pegawai-proses');
+    Route::delete('/delete-pegawai/{pegawai}', [PegawaiController::class, 'delete_pegawai'])->name('delete-pegawai');
 }); 
 
 //Pages dengan authentikasi sebagai Petani

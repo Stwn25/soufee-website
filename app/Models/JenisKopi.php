@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
 class JenisKopi extends Model
 {
@@ -12,6 +12,8 @@ class JenisKopi extends Model
     protected $table = 'jenis_kopis';
     protected $primarykey = 'id_jenis_kopi';
     
+    public $timestamps = false; //menonaktirkan timestamps yang secara otomatis diisi oleh laravel
+
     protected $fillable = [
         'nama_jenis',
     ];

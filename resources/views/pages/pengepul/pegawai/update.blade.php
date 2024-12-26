@@ -1,22 +1,20 @@
 @extends('layouts.pengepul_layouts.app')
 @section('content')
     
-<form action="{{ route('store-kapasitas') }}" method="POST" class="flex flex-col">
+<form action="{{ route('update-pegawai-proses', $pegawai->id_pegawai) }}" method="POST" class="flex flex-col">
     @csrf
-    <label for="id_jenis_kopi" class="font-semibold">Jenis Kopi</label>
-    <select name="id_jenis_kopi" id="id_jenis_kopi" class="border-0 px-8 py-2 rounded-xl mb-4">
-        @foreach ($jeniskopi as $namajenis )
-            <option value="{{ $namajenis->id_jenis_kopi }}">{{ $namajenis->nama_jenis }}</option>
-        @endforeach
-    </select>
+    @method('PUT')
+    <label for="kapasitas" class="font-semibold">Nama Pegawai</label>
+    <input type="text" name="nama" id="kapasitas" placeholder="Masukkan nama pegawai" class="mb-4 border-0 px-8 py-2 rounded-xl" value="{{ $pegawai->nama }}">
 
-    <label for="kapasitas" class="font-semibold">Kapasitas</label>
-    <input type="number" name="kapasitas" id="kapasitas" placeholder="Masukkan besar kapasitas (kg)" class="mb-4 border-0 px-8 py-2 rounded-xl">
+    <label for="deskripsi" class="font-semibold">Nomor Telepon Pegawai</label>
+    <input type="text" name="no_telepon" id="deskripsi" placeholder="Masukkan nomor telepon pegawai" class="mb-4 border-0 px-8 py-2 rounded-xl" value="{{ $pegawai->no_telepon }}">
 
-    <label for="deskripsi" class="font-semibold">Deskripsi</label>
-    <input type="text" name="deskripsi" id="deskripsi" placeholder="Masukkan deskripsi kapasitas" class="mb-4 border-0 px-8 py-2 rounded-xl">
+    <label for="deskripsi" class="font-semibold">Alamat Pegawai</label>
+    <input type="text" name="alamat" id="deskripsi" placeholder="Masukkan alamat pegawai" class="mb-4 border-0 px-8 py-2 rounded-xl" value="{{ $pegawai->alamat }}">
+
     <div class="absolute right-4 bottom-0">
-        <a href="{{ route('dashboard-pengepul') }}" class="px-16 py-3 text-[#1C3F3A] border-2 border-[#1C3F3A] font-semibold rounded-md">Batal</a>
+        <a href="{{ route('data-pegawai') }}" class="px-16 py-3 text-[#1C3F3A] border-2 border-[#1C3F3A] font-semibold rounded-md">Batal</a>
         <button type="submit" class="px-16 py-3 bg-[#1C3F3A] font-semibold text-[#edebe4] rounded-md">Tambah</button>
     </div>
 </form>

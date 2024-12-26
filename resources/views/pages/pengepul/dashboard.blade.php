@@ -11,7 +11,7 @@
     </a>
 </div>
 
-<div class="w-full grid grid-cols-4 gap-4">
+<div class="w-full grid grid-cols-4 gap-4 pb-4">
     @foreach ($kapasitas as $item)
     <div class="rounded-xl shadow-md overflow-hidden relative z-1">
         <div>
@@ -39,14 +39,14 @@
 <script>
     const btkatalog = document.querySelector('#bt-katalog');
     const btriwayat = document.querySelector('#bt-riwayat');
-    const btpenjemputan = document.querySelector('#bt-penjemputan');
+    const btpegawai = document.querySelector('#bt-pegawai');
 
     const tekskatalog = document.querySelector('#teks-katalog');
     const teksriwayat = document.querySelector('#teks-riwayat');
-    const tekspenjemputan = document.querySelector('#teks-penjemputan');
+    const tekspegawai = document.querySelector('#teks-pegawai');
 
-    const penjemputan1 = document.querySelector('#img-truk-1');
-    const penjemputan2 = document.querySelector('#img-truk-2');
+    const pegawai1 = document.querySelector('#img-user-1');
+    const pegawai2 = document.querySelector('#img-user-2');
 
     const katalog1 = document.querySelector('#img-katalog-1');
     const katalog2 = document.querySelector('#img-katalog-2');
@@ -63,10 +63,10 @@
     katalog1.style.display = 'none';
     katalog2.style.display = 'block';
 
-    btpenjemputan.style.backgroundColor = '#edebe4';
-    tekspenjemputan.style.color = '#1C3F3A';
-    penjemputan1.style.display = 'block';
-    penjemputan2.style.display = 'none';
+    btpegawai.style.backgroundColor = '#edebe4';
+    tekspegawai.style.color = '#1C3F3A';
+    pegawai1.style.display = 'block';
+    pegawai2.style.display = 'none';
 
     btriwayat.style.backgroundColor = '#edebe4';
     teksriwayat.style.color = '#1C3F3A';

@@ -4,11 +4,19 @@
                 <h1 class="text-[#a2a2a2]" style="font-family: Montserrat, 'sans-serif';">Menu</h1>
 
                 <!-- Link Gudang -->
-                <a href=""> 
+                <a href="{{ route('dashboard-pengepul') }}"> 
                     <div class="bg-[#edebe4] cursor-pointer px-4 py-2 rounded-xl border-2 border-[#1C3F3A] flex items-center gap-8" id="bt-katalog">
-                        <img src="{{ asset('img/streamline_coffee-bean-1.svg') }}" id="img-katalog-1" alt="">
-                        <img src="{{ asset('img/streamline_coffee-bean.svg') }}" id="img-katalog-2" alt="" class="hidden">
-                        <p class="text-[#1C3F3A] text-[110%]" id="teks-katalog">Gudang</p>
+                        <img src="{{ asset('img/hugeicons_warehouse-1.svg') }}" id="img-katalog-1" alt="">
+                        <img src="{{ asset('img/hugeicons_warehouse.svg') }}" id="img-katalog-2" alt="" class="hidden">
+                        <p class="text-[#1C3F3A] text-[110%] font-medium" id="teks-katalog">Gudang</p>
+                    </div>
+                </a>
+
+                <a href="{{ route('data-pegawai') }}"> 
+                    <div class="bg-[#edebe4] cursor-pointer px-4 py-2 rounded-xl border-2 border-[#1C3F3A] flex items-center gap-8" id="bt-pegawai">
+                        <img src="{{ asset('img/majesticons_user-box-line-1.svg') }}" id="img-user-1" alt="">
+                        <img src="{{ asset('img/majesticons_user-box-line.svg') }}" id="img-user-2" alt="" class="hidden">
+                        <p class="text-[#1C3F3A] text-[110%] font-medium" id="teks-pegawai">Pegawai</p>
                     </div>
                 </a>
 
