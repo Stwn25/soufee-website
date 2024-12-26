@@ -11,22 +11,26 @@
     </a>
 </div>
 
-<div class="w-full grid grid-cols-4 gap-2 border border-black">
+<div class="w-full grid grid-cols-4 gap-4">
     @foreach ($kapasitas as $item)
-    <div class="rounded-md border-1 border-[#1C3F3A] p-1">
+    <div class="rounded-xl shadow-md overflow-hidden relative z-1">
         <div>
-            <img src="{{ asset('img/coffe-bean-img.jpg') }}" alt="kopi" class="rounded-md">
+            <img src="{{ asset('img/coffe-bean-img.jpg') }}" alt="kopi">
         </div>
-        <div>
-            <h1>{{ $item->kapasitas }} kg</h1>
-            <h1>{{ $item->deskripsi }}</h1>
-            <h1>{{ $item->jenis_kopis->nama_jenis}}</h1>
-            <a href="{{ route('update-kapasitas', $item->id_kapasitas) }}">update</a>
-            <form action="{{ route('delete-kapasitas', $item->id_kapasitas) }}" method="POST">
-                @method('DELETE')
-                @csrf
-                <button type="submit">Delete</button>
-            </form>
+        <div class="p-2">
+            <p class="font-bold text-xl">{{ $item->kapasitas }} kg</p>
+            <p class="text-gray-400">{{ $item->jenis_kopis->nama_jenis}}</p>
+            <p class="mb-16">{{ \Illuminate\Support\Str::limit($item->deskripsi, 50) }}</p>
+            <div class="flex gap-2 absolute bottom-4 right-1.5">
+                <a href="{{ route('update-kapasitas', $item->id_kapasitas) }}">
+                    <p class="bg-[#ffb703] text-white py-2 px-3 rounded-md">update</p>
+                </a>
+                <form action="{{ route('delete-kapasitas', $item->id_kapasitas) }}" method="POST">
+                    @method('DELETE')
+                    @csrf
+                    <button type="submit" class="bg-[#ff4b4b] text-white py-2 px-3 rounded-md">Delete</button>
+                </form>
+            </div>
         </div>
     </div>
     @endforeach

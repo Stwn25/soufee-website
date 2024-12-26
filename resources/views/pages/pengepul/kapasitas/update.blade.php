@@ -15,10 +15,10 @@
     <input type="number" name="kapasitas" id="kapasitas" placeholder="Masukkan besar kapasitas" value="{{ $kapasitas->kapasitas }}" class="mb-4 border-0 px-8 py-2 rounded-xl">
 
     <label for="deskripsi" class="font-semibold">Deskripsi</label>
-    <input type="text" name="deskripsi" id="deskripsi" placeholder="Masukkan deskripsi kapasitas" value="{{ $kapasitas->deskripsi }}" class="mb-4 border-0 px-8 py-2 rounded-xl">
+    <input type="textarea" name="deskripsi" id="deskripsi" placeholder="Masukkan deskripsi kapasitas" value="{{ $kapasitas->deskripsi }}" class="mb-4 border-0 px-8 py-2 rounded-xl">
     <div class="absolute right-4 bottom-0">
         <a href="{{ route('dashboard-pengepul') }}" class="px-16 py-3 text-[#1C3F3A] border-2 border-[#1C3F3A] font-semibold rounded-md">Batal</a>
-        <button type="submit" class="px-16 py-3 bg-[#1C3F3A] font-semibold text-[#edebe4] rounded-md">Tambah</button>
+        <button type="submit" class="px-16 py-3 bg-[#1C3F3A] font-semibold text-[#edebe4] rounded-md">Update</button>
     </div>
 </form>
 

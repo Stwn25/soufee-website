@@ -51,7 +51,7 @@
         {{-- Sidebar --}}
         @include('layouts.pengepul_layouts.sidebar')
         <!-- Content -->
-        <div class="w-full border-2 border-[#d7d7d7] px-8 flex flex-col gap-4">
+        <div class="w-full border-l-2 border-[#d7d7d7] px-8 flex flex-col gap-4">
             @yield('content')
         </div>
     </div>
