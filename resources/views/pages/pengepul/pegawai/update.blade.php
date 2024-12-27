@@ -20,44 +20,14 @@
 </form>
 
 <script>
-    const btkatalog = document.querySelector('#bt-katalog');
-    const btriwayat = document.querySelector('#bt-riwayat');
-    const btpegawai = document.querySelector('#bt-pegawai');
+    const bt = document.querySelector('#bt-pegawai');
+    const teks = document.querySelector('#teks-pegawai');
+    const img1 = document.querySelector('#img-user-1');
+    const img2 = document.querySelector('#img-user-2');
 
-    const tekskatalog = document.querySelector('#teks-katalog');
-    const teksriwayat = document.querySelector('#teks-riwayat');
-    const tekspegawai = document.querySelector('#teks-pegawai');
-
-    const pegawai1 = document.querySelector('#img-user-1');
-    const pegawai2 = document.querySelector('#img-user-2');
-
-    const katalog1 = document.querySelector('#img-katalog-1');
-    const katalog2 = document.querySelector('#img-katalog-2');
-
-    const riwayat1 = document.querySelector('#img-riwayat-1');
-    const riwayat2 = document.querySelector('#img-riwayat-2');
-
-    const isiKatalog = document.querySelector('#isi-katalog');
-    const isiRiwayat = document.querySelector('#isi-riwayat');
-    const isiPenjemputan = document.querySelector('#isi-penjemputan');
-
-    btkatalog.style.backgroundColor = '#edebe4';
-    tekskatalog.style.color = '#1C3F3A';
-    katalog1.style.display = 'block';
-    katalog2.style.display = 'none';
-
-    btpegawai.style.backgroundColor = '#1C3F3A';
-    tekspegawai.style.color = '#edebe4';
-    pegawai1.style.display = 'none';
-    pegawai2.style.display = 'block';
-
-    btriwayat.style.backgroundColor = '#edebe4';
-    teksriwayat.style.color = '#1C3F3A';
-    riwayat1.style.display = 'block';
-    riwayat2.style.display = 'none';
-
-    isiKatalog.style.display = 'block';
-    isiRiwayat.style.display = 'none';
-    isiPenjemputan.style.display = 'none';
+    bt.style.backgroundColor = '#1C3F3A';
+    teks.style.color = '#edebe4';
+    img1.style.display = 'none';
+    img2.style.display = 'block';
 </script>
 @endsection

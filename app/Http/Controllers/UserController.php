@@ -26,7 +26,7 @@ class UserController extends Controller
 
     //Petani side
     public function dashboard_petani(){
-        $kapasitas = Kapasitas::with('jenis_kopis')->get();  
+        $kapasitas = Kapasitas::all();  
         return view('pages.petani.dashboard', compact('kapasitas'));
     }
  

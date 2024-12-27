@@ -12,6 +12,16 @@
                     </div>
                 </a>
 
+                <!-- Link Transaksi -->
+                <a href="{{ route('transaksi-pengepul') }}"> 
+                    <div class="bg-[#edebe4] cursor-pointer px-4 py-2 rounded-xl border-2 border-[#1C3F3A] flex items-center gap-8" id="bt-transaksi">
+                        <img src="{{ asset('img/hugeicons_transaction.svg') }}" id="img-transaksi-1" alt="">
+                        <img src="{{ asset('img/hugeicons_transaction-1.svg') }}" id="img-transaksi-2" alt="" class="hidden">
+                        <p class="text-[#1C3F3A] text-[110%] font-medium" id="teks-transaksi">Transaksi</p>
+                    </div>
+                </a>
+
+                <!-- Link Pegawai -->
                 <a href="{{ route('data-pegawai') }}"> 
                     <div class="bg-[#edebe4] cursor-pointer px-4 py-2 rounded-xl border-2 border-[#1C3F3A] flex items-center gap-8" id="bt-pegawai">
                         <img src="{{ asset('img/majesticons_user-box-line-1.svg') }}" id="img-user-1" alt="">

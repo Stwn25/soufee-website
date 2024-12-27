@@ -57,4 +57,13 @@ class User extends Authenticatable
     public function pegawais(){
         return $this->hasMany(Pegawai::class, 'id_user', 'id_user');  
     }
+
+    public function permintaans(){
+        return $this->hasMany(Permintaan::class, 'id_user', 'id_user');
+    }
+
+    // public function namaFungsi()
+    // {
+    //     return $this->belongsto/hasMany/hasOne(ModelYangBerelasi::class, 'foreign_key', 'primary_key');
+    // }
 }

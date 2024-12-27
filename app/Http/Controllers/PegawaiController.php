@@ -37,7 +37,7 @@ class PegawaiController extends Controller
 
     public function update_pegawai_proses(Request $request, Pegawai $pegawai){
         $id = Auth::user()->id_user;
-
+        
         $pegawai->update([
             'id_pegawai'=>$pegawai->id_pegawai,
             'id_user'=>$id,

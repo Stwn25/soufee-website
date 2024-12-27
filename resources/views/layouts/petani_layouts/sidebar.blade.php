@@ -8,7 +8,7 @@
                     <div class="bg-[#edebe4] cursor-pointer px-4 py-2 rounded-xl border-2 border-[#1C3F3A] flex items-center gap-8" id="bt-katalog">
                         <img src="{{ asset('img/streamline_coffee-bean-1.svg') }}" id="img-katalog-1" alt="">
                         <img src="{{ asset('img/streamline_coffee-bean.svg') }}" id="img-katalog-2" alt="" class="hidden">
-                        <p class="text-[#1C3F3A] text-[110%]" id="teks-katalog">Katalog</p>
+                        <p class="text-[#1C3F3A] text-[110%]" id="teks-katalog">Tawaran</p>
                     </div>
                 </a>
 

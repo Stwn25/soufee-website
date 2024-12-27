@@ -22,4 +22,9 @@ class JenisKopi extends Model
     {
         return $this->hasMany(Kapasitas::class, 'id_jenis_kopi', 'id_jenis_kopi');
     }
+
+    // public function namaFungsi()
+    // {
+    //     return $this->belongsto/hasMany/hasOne(ModelYangBerelasi::class, 'foreign_key', 'primary_key');
+    // }    
 }

@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\KapasitasController;
 use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\PermintaanController;
+use App\Http\Controllers\TransaksiController;
 
 
 //Landing Pages
@@ -48,9 +50,13 @@ Route::middleware(['role:pengepul'])->group(function () {
     Route::get('/update-pegawai/{pegawai}', [PegawaiController::class, 'update_pegawai'])->name('update-pegawai');
     Route::put('/update-pegawai/{pegawai}', [PegawaiController::class, 'update_pegawai_proses'])->name('update-pegawai-proses');
     Route::delete('/delete-pegawai/{pegawai}', [PegawaiController::class, 'delete_pegawai'])->name('delete-pegawai');
+
+    //Transaksi
+    Route::get('/transaksi', [TransaksiController::class,'index'])->name('transaksi-pengepul');
 }); 
 
 //Pages dengan authentikasi sebagai Petani
 Route::middleware(['role:petani'])->group(function () {
-    
+    Route::get('/create-permintaan/{kapasitas}', [PermintaanController::class,'create_permintaan'])->name('permintaan-petani'); 
+    Route::put('/create-permintaan-proses/{kapasitas}', [PermintaanController::class,'store_permintaan'])->name('permintaan-petani-proses');
 });
