@@ -44,15 +44,15 @@
     const isiRiwayat = document.querySelector('#isi-riwayat');
     const isiPenjemputan = document.querySelector('#isi-penjemputan');
 
-    btkatalog.style.backgroundColor = '#edebe4';
-    tekskatalog.style.color = '#1C3F3A';
-    katalog1.style.display = 'block';
-    katalog2.style.display = 'none';
+    btkatalog.style.backgroundColor = '#1C3F3A';
+    tekskatalog.style.color = '#edebe4';
+    katalog1.style.display = 'none';
+    katalog2.style.display = 'block';
 
-    btpegawai.style.backgroundColor = '#1C3F3A';
-    tekspegawai.style.color = '#edebe4';
-    pegawai1.style.display = 'none';
-    pegawai2.style.display = 'block';
+    btpegawai.style.backgroundColor = '#edebe4';
+    tekspegawai.style.color = '#1C3F3A';
+    pegawai1.style.display = 'block';
+    pegawai2.style.display = 'none';
 
     btriwayat.style.backgroundColor = '#edebe4';
     teksriwayat.style.color = '#1C3F3A';

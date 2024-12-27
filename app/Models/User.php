@@ -53,4 +53,8 @@ class User extends Authenticatable
     public function kapasitas(){
         return $this->hasMany(Kapasitas::class, 'id_user', 'id_user');
     }
+
+    public function pegawais(){
+        return $this->hasMany(Pegawai::class, 'id_user', 'id_user');  
+    }
 }
