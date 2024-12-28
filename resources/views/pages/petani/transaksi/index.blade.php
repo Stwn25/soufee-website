@@ -1,4 +1,4 @@
-@extends('layouts.pengepul_layouts.app')
+@extends('layouts.petani_layouts.app')
 @section('content')
     
 <div>
@@ -9,7 +9,6 @@
 <div class="flex gap-4">
     @foreach ($transaksis as $transaksi)
     <div>
-        <p>{{ $transaksi->users->name }}</p>
         <p>{{ $transaksi->status_transaksis->status_transaksi }}</p>
         <p>{{ $transaksi->jumlah_permintaan }}</p>
         <p>{{ $transaksi->kapasitas->jenis_kopis->nama_jenis }}</p>

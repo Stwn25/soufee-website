@@ -26,13 +26,13 @@ class PermintaanController extends Controller
             'kapasitas_terbaru' => ($kapasitas->kapasitas_terbaru - $request->jumlah_permintaan),
             'deskripsi' => $kapasitas->deskripsi,
         ]);
-        
-        Permintaan::create([
-            'id_user' => $id,
-            'id_kapasitas' => $kapasitas->id_kapasitas,
-            'jumlah_permintaan' => $request->jumlah_permintaan,
-            'id_status_permintaan' => 1
-        ]);
+
+        // Permintaan::create([
+        //     'id_user' => $id,
+        //     'id_kapasitas' => $kapasitas->id_kapasitas,
+        //     'jumlah_permintaan' => $request->jumlah_permintaan,
+        //     'id_status_permintaan' => 1
+        // ]);
 
 
         return redirect('dashboard-petani')->with('success', 'Permintaan berhasil ditambahkan!');

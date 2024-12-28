@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('transaksis', function (Blueprint $table) {
             $table->id('id_transaksi');
-            $table->bigInteger('id_permintaan')->constrained('permintaans', 'id_permintaan')->onDelete('cascade');
-            $table->bigInteger('id_pegawai')->constrained('pegawais', 'id_pegawai')->onDelete('cascade');
-            $table->date('tanggal_penjemputan');
+            $table->bigInteger('id_petani')->constrained('users', 'id_user')->onDelete('cascade');
+            $table->bigInteger('id_kapasitas')->constrained('kapasitass', 'id_kapasitas')->onDelete('cascade');
+            $table->integer('jumlah_permintaan');
+            $table->date('tanggal_penjemputan')->nullable();
+            $table->bigInteger('id_pegawai')->nullable()->constrained('pegawais', 'id_pegawai')->onDelete('cascade');
             $table->bigInteger('id_status_transaksi')->constrained('status_transaksis', 'id_status_transaksi')->onDelete('cascade');
             $table->timestamps();
         });

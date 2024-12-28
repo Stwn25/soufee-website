@@ -28,8 +28,8 @@ class Kapasitas extends Model
         return $this->belongsTo(JenisKopi::class, 'id_jenis_kopi', 'id_jenis_kopi'); //
     }
 
-    public function permintaans(){
-        return $this->hasMany(Permintaan::class, 'id_kapasitas', 'id_kapasitas');
+    public function transaksis(){
+        return $this->hasMany(Transaksi::class, 'id_kapasitas', 'id_kapasitas');
     }
 
     // public function namaFungsi()

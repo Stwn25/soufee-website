@@ -17,7 +17,7 @@ class StatusTransaksiFactory extends Factory
     public function definition(): array
     {
         return [
-            'status_transaksi' => $this->faker->unique()->randomElement(['Proses', 'Selesai']),
+            'status_transaksi' => $this->faker->unique()->randomElement(['Pending', 'Proses', 'Selesai']),
         ];
     }
 }

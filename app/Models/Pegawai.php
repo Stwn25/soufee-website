@@ -24,6 +24,10 @@ class Pegawai extends Model
         return $this->belongsTo(User::class, 'id_user', 'id_user');
     }
 
+    public function transaksis(){
+        return $this->hasOne(Transaksi::class, 'id_pegawai', 'id_pegawai');
+    }
+
     // public function namaFungsi()
     // {
     //     return $this->belongsto/hasMany/hasOne(ModelYangBerelasi::class, 'foreign_key', 'primary_key');

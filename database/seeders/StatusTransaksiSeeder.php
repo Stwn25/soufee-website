@@ -13,6 +13,7 @@ class StatusTransaksiSeeder extends Seeder
      */
     public function run(): void
     {
+        StatusTransaksi::factory()->create(['status_transaksi' => 'Pending']);
         StatusTransaksi::factory()->create(['status_transaksi' => 'Proses']);
         StatusTransaksi::factory()->create(['status_transaksi' => 'Selesai']);
     }

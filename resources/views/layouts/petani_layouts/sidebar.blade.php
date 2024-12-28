@@ -12,13 +12,12 @@
                     </div>
                 </a>
 
-                <!-- Link Penjemputan -->
-                <a href=""> {{--  --}}
-                    <div class="bg-[#edebe4] cursor-pointer px-4 py-2 rounded-xl border-2 border-[#1C3F3A] flex items-center gap-8"
-                        id="bt-penjemputan">
-                        <img src="{{ asset('img/hugeicons_truck.svg') }}" alt="" id="img-truk-1">
-                        <img src="{{ asset('img/hugeicons_truck-1.svg') }}" alt="" id="img-truk-2" class="hidden">
-                        <p class="text-[#1C3F3A] text-[110%]" id="teks-penjemputan">Penjemputan</p>
+                <!-- Link Transaksi -->
+                <a href="{{ route('transaksi-petani') }}"> {{--  --}}
+                    <div class="bg-[#edebe4] cursor-pointer px-4 py-2 rounded-xl border-2 border-[#1C3F3A] flex items-center gap-8"id="bt-transaksi">
+                        <img src="{{ asset('img/hugeicons_transaction.svg') }}" alt="" id="img-transaksi-1">
+                        <img src="{{ asset('img/hugeicons_transaction-1.svg') }}" alt="" id="img-transaksi-2" class="hidden">
+                        <p class="text-[#1C3F3A] text-[110%]" id="teks-transaksi">Transaksi</p>
                     </div>
                 </a>
 

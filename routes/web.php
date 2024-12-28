@@ -52,11 +52,15 @@ Route::middleware(['role:pengepul'])->group(function () {
     Route::delete('/delete-pegawai/{pegawai}', [PegawaiController::class, 'delete_pegawai'])->name('delete-pegawai');
 
     //Transaksi
-    Route::get('/transaksi', [TransaksiController::class,'index'])->name('transaksi-pengepul');
+    Route::get('/transaksi-pengepul', [TransaksiController::class,'index_pengepul'])->name('transaksi-pengepul');
 }); 
 
 //Pages dengan authentikasi sebagai Petani
 Route::middleware(['role:petani'])->group(function () {
-    Route::get('/create-permintaan/{kapasitas}', [PermintaanController::class,'create_permintaan'])->name('permintaan-petani'); 
-    Route::put('/create-permintaan-proses/{kapasitas}', [PermintaanController::class,'store_permintaan'])->name('permintaan-petani-proses');
+    //Permintaan
+    Route::get('/create-permintaan/{kapasitas}', [TransaksiController::class,'create_permintaan'])->name('permintaan-petani'); 
+    Route::put('/create-permintaan-proses/{kapasitas}', [TransaksiController::class,'store_permintaan'])->name('permintaan-petani-proses');
+
+    //Transaksi
+    Route::get('/transaksi-petani', [TransaksiController::class,'index_petani'])->name('transaksi-petani');
 });
