@@ -13,6 +13,9 @@
     <label for="kapasitas" class="font-semibold">Kapasitas</label>
     <input type="number" name="kapasitas" id="kapasitas" placeholder="Masukkan besar kapasitas (kg)" class="mb-4 border-0 px-8 py-2 rounded-xl">
 
+    <label for="kapasitas" class="font-semibold">Harga per Kilogram</label>
+    <input type="number" name="harga_per_kg" id="kapasitas" placeholder="Masukkan harga kopi per kilogram" class="mb-4 border-0 px-8 py-2 rounded-xl">
+
     <label for="deskripsi" class="font-semibold">Deskripsi</label>
     <input type="text" name="deskripsi" id="deskripsi" placeholder="Masukkan deskripsi kapasitas" class="mb-4 border-0 px-8 py-2 rounded-xl">
     <div class="absolute right-4 bottom-0">

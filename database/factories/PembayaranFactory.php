@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\JenisKopi>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Pembayaran>
  */
-class JenisKopiFactory extends Factory
+class PembayaranFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +17,7 @@ class JenisKopiFactory extends Factory
     public function definition(): array
     {
         return [
-            'nama_jenis' => $this->faker->unique()->randomElement(['Arabika', 'Robusta', 'Liberika', 'Gayo', 'Mandailing', 'Bali Kintamani']),
+            //
         ];
     }
 }

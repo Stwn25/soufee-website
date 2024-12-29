@@ -14,6 +14,7 @@ class Kapasitas extends Model
 
     protected $fillable = [
         'id_user',
+        'harga_per_kg',
         'id_jenis_kopi',
         'kapasitas_maksimum',
         'kapasitas_terbaru',

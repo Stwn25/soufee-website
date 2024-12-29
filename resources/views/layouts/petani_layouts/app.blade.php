@@ -51,7 +51,7 @@
         {{-- Sidebar --}}
         @include('layouts.petani_layouts.sidebar')
         <!-- Content -->
-        <div class="w-full border-l-2 border-[#d7d7d7] px-8 flex flex-col gap-4">
+        <div class="w-full border-l-2 border-[#d7d7d7] px-8 flex flex-col gap-4 relative z-1">
             @yield('content')
         </div>
     </div>
@@ -78,6 +78,8 @@
     const isiKatalog = document.querySelector('#isi-katalog');
     const isiRiwayat = document.querySelector('#isi-riwayat');
     const isiPenjemputan = document.querySelector('#isi-penjemputan');
+
+    feather.replace()
 </script>
   
 

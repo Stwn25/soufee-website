@@ -16,6 +16,7 @@ class Transaksi extends Model
         'id_petani',
         'id_kapasitas',
         'jumlah_permintaan',
+        'total_harga',
         'tanggal_penjemputan',
         'id_pegawai',
         'id_status_transaksi',

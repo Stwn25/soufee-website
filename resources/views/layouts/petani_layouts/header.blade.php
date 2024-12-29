@@ -4,7 +4,7 @@
             <a href="#"><h2 class="text-3xl font-bold text-[#1C3F3A]" style="font-family: 'Montserrat', sans-serif;">Soufee</h2></a>
         </div>
         <div class="ml-10">
-            <h1 class="text-3xl font-bold text-[#1C3F3A]" style="font-family: 'Montserrat', sans-serif;">Halo, Petani!</h1>
+            <h1 class="text-3xl font-bold text-[#1C3F3A]" style="font-family: 'Montserrat', sans-serif;">Halo, {{ Auth::user()->name }}!</h1>
             <p class="text-[110%] text-[#a2a2a2]" style="font-family: 'Montserrat', sans-serif;">Tingkatkan hasil kopimu, mulai hari ini</p>
         </div>
         {{-- <div class="grid grid-cols-2 items-center h-[100%]">

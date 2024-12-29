@@ -16,6 +16,7 @@ return new class extends Migration
             $table->bigInteger('id_petani')->constrained('users', 'id_user')->onDelete('cascade');
             $table->bigInteger('id_kapasitas')->constrained('kapasitass', 'id_kapasitas')->onDelete('cascade');
             $table->integer('jumlah_permintaan');
+            $table->integer('total_harga');
             $table->date('tanggal_penjemputan')->nullable();
             $table->bigInteger('id_pegawai')->nullable()->constrained('pegawais', 'id_pegawai')->onDelete('cascade');
             $table->bigInteger('id_status_transaksi')->constrained('status_transaksis', 'id_status_transaksi')->onDelete('cascade');

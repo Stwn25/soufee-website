@@ -30,6 +30,16 @@
                     </div>
                 </a>
 
+                <!-- Link Riwayat -->
+                <a href="{{ route('riwayat-pengepul') }}"> {{-- {{route('riwayat-petani')}} --}}
+                    <div class="bg-[#edebe4] cursor-pointer px-4 py-2 rounded-xl border-2 border-[#1C3F3A] flex items-center gap-8"
+                        id="bt-riwayat">
+                        <img src="{{ asset('img/lucide_history.svg') }}" alt="" id="img-riwayat-1">
+                        <img src="{{ asset('img/lucide_history-1.svg') }}" alt="" id="img-riwayat-2" class="hidden">
+                        <p class="text-[#1C3F3A] text-[110%] font-medium" id="teks-riwayat">Riwayat</p>
+                    </div>
+                </a>
+
                 <!-- Logout -->
                 <a href="{{ route('logout') }}" class="text-[#1C3F3A] text-[130%]" id="teks-riwayat">
                     <div class="absolute bottom-0 w-full bg-[#edebe4] cursor-pointer px-4 py-2 rounded-xl border-2 border-[#1C3F3A] flex justify-center items-center gap-2">

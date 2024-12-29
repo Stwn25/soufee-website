@@ -18,16 +18,20 @@ class UserController extends Controller
         //Memunculkan data kapasitas sesuai dengan user yang login
         $id = Auth::user()->id_user;
         $kapasitas = Kapasitas::where('id_user', $id)
+                    ->orderBy('created_at', 'desc')
                     ->with('jenis_kopis')
                     ->get();
         
-        return view('pages.pengepul.dashboard', compact('kapasitas'));
+        return view('pages.pengepul.dashboard', compact('kapasitas', 'id'));
     }
 
     //Petani side
     public function dashboard_petani(){
-        $kapasitas = Kapasitas::all();  
-        return view('pages.petani.dashboard', compact('kapasitas'));
+        $kapasitas = Kapasitas::all()
+                    ->where('kapasitas_terbaru', '>', 0);  
+
+        $id = Auth::user()->id_user;
+        return view('pages.petani.dashboard', compact('kapasitas', 'id'));
     }
  
 }

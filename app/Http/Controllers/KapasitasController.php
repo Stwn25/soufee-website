@@ -20,6 +20,7 @@ class KapasitasController extends Controller
         $id = Auth::user()->id_user;
         Kapasitas::create([
             'id_user' => $id,
+            'harga_per_kg' => $request->harga_per_kg,
             'id_jenis_kopi' => $request->id_jenis_kopi,
             'kapasitas_maksimum' => $request->kapasitas,
             'kapasitas_terbaru' => $request->kapasitas,
@@ -38,6 +39,7 @@ class KapasitasController extends Controller
         
         $kapasitas->update([
             'id_kapasitas' => $kapasitas->id_kapasitas,
+            'harga_per_kg' => $request->harga_per_kg,
             'id_jenis_kopi' => $request->id_jenis_kopi,
             'kapasitas_maksimum' => $request->kapasitas_maksimum,
             'kapasitas_terbaru' => ($request->kapasitas_maksimum - $kapasitas->kapasitas_maksimum) + $kapasitas->kapasitas_terbaru,

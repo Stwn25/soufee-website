@@ -14,6 +14,9 @@
     <label for="kapasitas" class="font-semibold">Kapasitas Maksimum</label>
     <input type="number" name="kapasitas_maksimum" id="kapasitas" placeholder="Masukkan besar kapasitas" value="{{ $kapasitas->kapasitas_maksimum }}" class="mb-4 border-0 px-8 py-2 rounded-xl">
 
+    <label for="kapasitas" class="font-semibold">Harga per Kilogram</label>
+    <input type="number" name="harga_per_kg" id="kapasitas" placeholder="Masukkan harga kopi per kilogram" class="mb-4 border-0 px-8 py-2 rounded-xl" value="{{ $kapasitas->harga_per_kg }}">
+
     <label for="deskripsi" class="font-semibold">Deskripsi</label>
     <input type="textarea" name="deskripsi" id="deskripsi" placeholder="Masukkan deskripsi kapasitas" value="{{ $kapasitas->deskripsi }}" class="mb-4 border-0 px-8 py-2 rounded-xl">
     <div class="absolute right-4 bottom-0">
