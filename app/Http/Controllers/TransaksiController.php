@@ -32,11 +32,12 @@ class TransaksiController extends Controller
     //Halaman Riwayat
     public function riwayat_transaksi_petani(){
         $id = Auth::user()->id_user;
-        $transaksis = Transaksi::where('id_petani', $id)
+        $transaksis_selesai = Transaksi::where('id_petani', $id)
                    ->with('kapasitas', 'status_transaksis')
+                   ->orderBy('created_at', 'desc')
                    ->where('id_status_transaksi', 3)
                    ->get(); //mengambil permintaan yang dioffer oleh id petani yang login
-        return view('pages.petani.transaksi.riwayat', compact('transaksis'));
+        return view('pages.petani.transaksi.riwayat', compact('transaksis_selesai'));
     }
 
     //Halaman Petani Membuat Permintaan
@@ -116,13 +117,14 @@ class TransaksiController extends Controller
     //Halaman Riwayat
     public function riwayat_transaksi_pengepul(){
         $id = Auth::user()->id_user;
-        $transaksis = Transaksi::whereHas('kapasitas', function ($query) use ($id) {
+        $transaksis_selesai = Transaksi::whereHas('kapasitas', function ($query) use ($id) {
                             $query->where('id_user', $id);
                         }) //mengambil permintaan yang dimiliki oleh id pengepul yang login
                         ->where('id_status_transaksi', 3)
+                        ->orderBy('created_at', 'desc')
                         ->with('kapasitas', 'status_transaksis')
                         ->get();
-        return view('pages.pengepul.transaksi.riwayat', compact('transaksis'));
+        return view('pages.pengepul.transaksi.riwayat', compact('transaksis_selesai'));
     }
 
     //Halaman Terima Permintaan dengan mengatur jadwal dan pegawai penjemputan

@@ -1,7 +1,30 @@
 @extends('layouts.petani_layouts.app')
 @section('content')
     
-<p>Ini Riwayat</p>
+<table class="w-full text-center mt-2">
+    <thead>
+        <tr class="border-b-2 border-[#d9d9d9]">
+            <th>No.</th>
+            <th>Nama Petani</th>
+            <th>Jenis Kopi</th>
+            <th>Tanggal Permintaan</th>
+            <th>Jumlah Permintaan</th>
+            <th>Total Harga</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach ($transaksis_selesai as $transaksi)
+            <tr class="py-4 border-b-2 border-[#d9d9d9]">
+                <td>{{ $loop->iteration }}</td>
+                <td class="py-4">{{ $transaksi->users->name }}</td>
+                <td>{{ $transaksi->kapasitas->jenis_kopis->nama_jenis }}</td>
+                <td>{{ $transaksi->created_at ->format('d M Y') }}</td>
+                <td>{{ $transaksi->jumlah_permintaan }} kg</td>
+                <td>Rp.{{ number_format($transaksi->total_harga) }}</td>
+            </tr>
+        @endforeach
+    </tbody>
+</table>
 
 <script>
     const bt = document.querySelector('#bt-riwayat');
