@@ -48,8 +48,6 @@
     <div class="z-99">
         @include('layouts.pengepul_layouts.header')
     </div>
-
-    
     {{-- @include('Pengepul.layouts.sidebar') --}}
     <div class="w-full mt-32 px-2 grid grid-cols-[0.22fr_1fr] gap-8">
         {{-- Sidebar --}}

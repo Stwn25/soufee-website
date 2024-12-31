@@ -8,11 +8,11 @@
             <p class="text-[110%] text-[#a2a2a2]" style="font-family: 'Montserrat', sans-serif;">Tingkatkan hasil kopimu, mulai hari ini</p>
         </div>
         <div class="grid grid-cols-[0.2fr_1fr] items-center">
-            <div class="border-1 border-[#1C3F3A] justify-center flex size-[50px] p-2 rounded-full cursor-pointer">
+            <div class="border-2 border-[#1C3F3A] justify-center flex size-[50px] p-2 rounded-full cursor-pointer">
                 <img src="{{('img/iconamoon_notification.svg') }}" alt="" >
             </div>
 
-            <div id="profil" class="border-1 border-[#1C3F3A] grid grid-cols-[0.2fr_1fr_0.2fr] items-center gap-2 rounded-full cursor-pointer">
+            <div id="profil" class="border-2 border-[#1C3F3A] grid grid-cols-[0.2fr_1fr_0.2fr] items-center gap-2 rounded-full cursor-pointer">
                 <div class="p-1">
                     <img src="{{ asset('img/image.png') }}" alt="" class="rounded-full">
                 </div>
@@ -25,7 +25,7 @@
         </div>
     </nav>
 
-    <div id="dropdown-profile" class="hidden w-[24%] rounded-md border border-black absolute top-24 right-5 px-4  bg-[#edebe4]">
+    <div id="dropdown-profile" class="hidden w-[15%] rounded-md border-2 border-[#1C3F3A] absolute top-24 right-5 px-4  bg-[#edebe4]">
         <a href="">
             <p class="text-[#1C3F3A] my-2 font-medium">Pengaturan Profil</p>
         </a>
