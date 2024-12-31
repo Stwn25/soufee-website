@@ -39,6 +39,16 @@
                     @enderror
                 </div>
 
+                <!-- Username Field -->
+                <div class="">
+                    <label for="yourName" class="form-label">Username</label>
+                    <input type="text" name="username" class="form-control"">
+                    <div class="invalid-feedback">Mohon masukkan username Anda!</div>
+                    @error('name')
+                        <p class="text-danger">{{ $message }}</p>
+                    @enderror
+                </div>
+
                 <!-- Email Field -->
                 <div class="">
                     <label for="yourEmail" class="form-label">Email</label>
@@ -51,7 +61,7 @@
                 </div>
 
                 <!-- Password Field -->
-                <div class="mb-12">
+                <div class="mb-6">
                     <label for="yourPassword" class="form-label">Password</label>
                     <input type="password" name="password" class="form-control" id="yourPassword"
                         required>
@@ -74,7 +84,7 @@
                 </div>
 
                 <!-- Submit Button -->
-                <div class="mb-6">
+                <div class="mb-2">
                     <button class="bg-[#1C3F3A] hover:bg-[#1C3F3A]/90 w-full text-white py-[15px] rounded-lg" type="submit">Daftar</button>
                 </div>
 

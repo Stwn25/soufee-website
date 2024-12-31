@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="mb-4 flex flex-row gap-12">
-    <a href="{{ route('dashboard-petani') }}">
+    <a href="{{ route('transaksi-pengepul') }}">
         <i data-feather="arrow-left"></i>
     </a>
     <p>Atur Transaksi</p>

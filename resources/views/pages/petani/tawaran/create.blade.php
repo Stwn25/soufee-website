@@ -1,10 +1,11 @@
 @extends('layouts.petani_layouts.app')
 @section('content')
 
-<div class="mb-4">
+<div class="mb-4 flex flex-row gap-12">
     <a href="{{ route('dashboard-petani') }}">
         <i data-feather="arrow-left"></i>
     </a>
+    <p>Jual Kopi</p>
 </div>
 
 <div class="grid grid-cols-[0.7fr_1fr] gap-4 mb-4">

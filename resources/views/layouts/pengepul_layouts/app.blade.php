@@ -45,9 +45,13 @@
 </head>
 
 <body class="bg-[#edebe4]" style="font-family: 'Montserrat', sans-serif;">
-    @include('layouts.pengepul_layouts.header')
-    {{-- @include('Petani.layouts.sidebar') --}}
-    <div class="w-full mt-32 px-2 grid grid-cols-[0.22fr_1fr] gap-8 relative ">
+    <div class="z-99">
+        @include('layouts.pengepul_layouts.header')
+    </div>
+
+    
+    {{-- @include('Pengepul.layouts.sidebar') --}}
+    <div class="w-full mt-32 px-2 grid grid-cols-[0.22fr_1fr] gap-8">
         {{-- Sidebar --}}
         @include('layouts.pengepul_layouts.sidebar')
         <!-- Content -->

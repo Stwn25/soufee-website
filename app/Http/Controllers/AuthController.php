@@ -20,6 +20,7 @@ class AuthController extends Controller
     // dd($request->all());
         $request->validate([
             'name' =>'required|min:3',
+            'username' =>'required|unique:users',
             'email' =>'required|email|unique:users',
             'password' =>'required|min:6',
             'role' =>'required',
@@ -27,6 +28,7 @@ class AuthController extends Controller
         ]);
         User::create([
             'name' => $request->name,
+            'username' => $request->username,
             'email' => $request->email,
             'role' => $request->role,
             // 'telephone =' => $request->telephone,

@@ -1,7 +1,7 @@
 @extends('layouts.pengepul_layouts.app')
 @section('content')
     
-<div class="w-full flex justify-between  items-center">
+<div class="w-full flex justify-between items-center">
     <p>Kapasitas yang Anda miliki.</p>
     <a href="{{ route('create-kapasitas') }}">
         <div class="flex gap-2 py-2 px-3 bg-[#1C3F3A] rounded-xl">

@@ -1,5 +1,5 @@
 @extends('layouts.auth_layout.main')
-@section('title', 'Soufee | Login')
+@section('title', 'Soufee | Masuk')
 @section('content')
     <main class="w-full h-screen flex justify-center items-center">
             <section class="w-[1350px] h-[700px] grid grid-cols-2 rounded-lg p-4 gap-6 bg-[#f9f7ed] ">

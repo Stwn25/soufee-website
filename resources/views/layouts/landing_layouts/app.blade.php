@@ -14,6 +14,9 @@
     <title>
         @yield('title')
     </title>
+    <script>
+        @vite('resources/js/landing.js')
+    </script>
     @stack('styles')
     @vite('resources/css/app.css')
 </head>
@@ -26,10 +29,6 @@
         @yield('content')
     </div>
     @include('layouts.landing_layouts.footer')
-
-    <script>
-        @vite('resources/js/landing.js')
-    </script>
     <script>
         feather.replace();
     </script>
