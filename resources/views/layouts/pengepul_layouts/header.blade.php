@@ -13,8 +13,12 @@
             </div>
 
             <div id="profil" class="border-2 border-[#1C3F3A] grid grid-cols-[0.2fr_1fr_0.2fr] items-center gap-2 rounded-full cursor-pointer">
-                <div class="p-1">
-                    <img src="{{ asset('img/image.png') }}" alt="" class="rounded-full">
+                <div class=" w-12 h-12 rounded-full overflow-hidden">
+                    @if (Auth::user()->image == null)
+                        <img src="{{ asset('img/image.png') }}" alt="" class="rounded-full">
+                    @else
+                        <img src="{{ asset('storage/'.Auth::user()->image) }}" alt="" class="rounded-full">
+                    @endif
                 </div>
                 <div class="flex flex-col">
                     <p class="text-sm font-semibold text-[#1C3F3A]">{{ Auth::user()->name }}</p>
@@ -26,7 +30,7 @@
     </nav>
 
     <div id="dropdown-profile" class="hidden w-[17%] rounded-md border-2 border-[#1C3F3A] absolute top-24 right-5 px-3 py-2  bg-[#edebe4]">
-        <a href="{{ route('profile-pengepul') }}" class="flex gap-3 py-1">
+        <a href="{{ route('profil-pengepul') }}" class="flex gap-3 py-1">
             <img src="{{ asset('img/hugeicons_account-setting-02.svg') }}" alt="">
             <p class="text-[#1C3F3A] my-2 font-medium">Pengaturan Profil</p>
         </a>

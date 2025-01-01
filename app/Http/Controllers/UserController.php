@@ -25,9 +25,36 @@ class UserController extends Controller
         return view('pages.pengepul.dashboard', compact('kapasitas', 'id'));
     }
 
-    public function profile_pengepul(){
+    public function profile_pengepul(User $user){
+        // $id = Auth::user()->id_user;
+        // dd(Auth::user()->image);
+        return view('pages.pengepul.profil', compact('user'));
+    }
+
+    public function update_profile_pengepul_proses(Request $request, User $user){
         $id = Auth::user()->id_user;
-        return view('pages.pengepul.profil', compact('id'));
+        
+        // dd($request);
+        if($request->file('image') != null){
+            $user->update([
+                'id_user' => $id,
+                'name' => $request->name,
+                'username' => $request->username,
+                'email' => $request->email,
+                'image' => $request->file('image')->store('img-profil'),
+                'alamat' => $request->alamat,
+            ]);
+        }else{
+            $user->update([
+                'id_user' => $id,
+                'name' => $request->name,
+                'username' => $request->username,
+                'email' => $request->email,
+                'alamat' => $request->alamat,
+            ]);
+        }
+        
+        return redirect()->route('profil-pengepul');
     }
 
     //Petani side

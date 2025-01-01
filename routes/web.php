@@ -38,7 +38,8 @@ Route::group(['middleware' => ['auth']], function () {
 Route::middleware(['role:pengepul'])->group(function () {
 
     //Profile
-    Route::get('/profile-pengepul', [UserController::class,'profile_pengepul'])->name('profile-pengepul');
+    Route::get('/profile-pengepul', [UserController::class,'profile_pengepul'])->name('profil-pengepul');
+    Route::put('/update-profile-pengepul/{user}', [UserController::class,'update_profile_pengepul_proses'])->name('update-profil-pengepul');
 
     //Kapasitas
     Route::get('/create-kapasitas', [KapasitasController::class, 'create_kapasitas'])->name('create-kapasitas');
