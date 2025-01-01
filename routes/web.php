@@ -36,6 +36,10 @@ Route::group(['middleware' => ['auth']], function () {
 
 //Pages dengan authentikasi sebagai Pengepul
 Route::middleware(['role:pengepul'])->group(function () {
+
+    //Profile
+    Route::get('/profile-pengepul', [UserController::class,'profile_pengepul'])->name('profile-pengepul');
+
     //Kapasitas
     Route::get('/create-kapasitas', [KapasitasController::class, 'create_kapasitas'])->name('create-kapasitas');
     Route::post('/store-kapasitas', [KapasitasController::class, 'store_kapasitas'])->name('store-kapasitas');

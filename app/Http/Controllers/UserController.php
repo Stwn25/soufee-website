@@ -25,6 +25,11 @@ class UserController extends Controller
         return view('pages.pengepul.dashboard', compact('kapasitas', 'id'));
     }
 
+    public function profile_pengepul(){
+        $id = Auth::user()->id_user;
+        return view('pages.pengepul.profil', compact('id'));
+    }
+
     //Petani side
     public function dashboard_petani(){
         $kapasitas = Kapasitas::all()

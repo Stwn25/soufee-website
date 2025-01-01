@@ -62,7 +62,7 @@
                 <th>No.</th>
                 <th>Nama Petani</th>
                 <th>Jenis Kopi</th>
-                <th>Tanggal Permintaan</th>
+                <th>Tanggal Penjemputan</th>
                 <th>Jumlah Permintaan</th>
                 <th>Total Harga</th>
                 <th>Aksi</th>
@@ -74,7 +74,7 @@
                     <td>{{ $loop->iteration }}</td>
                     <td class="py-4">{{ $transaksi->users->name }}</td>
                     <td>{{ $transaksi->kapasitas->jenis_kopis->nama_jenis }}</td>
-                    <td>{{ $transaksi->created_at ->format('d M Y') }}</td>
+                    <td>{{ $transaksi->tanggal_penjemputan }}</td>
                     <td>{{ $transaksi->jumlah_permintaan }} kg</td>
                     <td>Rp.{{ number_format($transaksi->total_harga) }}</td>
                     <td class="flex justify-center py-4">

@@ -25,12 +25,14 @@
         </div>
     </nav>
 
-    <div id="dropdown-profile" class="hidden w-[15%] rounded-md border-2 border-[#1C3F3A] absolute top-24 right-5 px-4  bg-[#edebe4]">
-        <a href="">
+    <div id="dropdown-profile" class="hidden w-[17%] rounded-md border-2 border-[#1C3F3A] absolute top-24 right-5 px-3 py-2  bg-[#edebe4]">
+        <a href="{{ route('profile-pengepul') }}" class="flex gap-3 py-1">
+            <img src="{{ asset('img/hugeicons_account-setting-02.svg') }}" alt="">
             <p class="text-[#1C3F3A] my-2 font-medium">Pengaturan Profil</p>
         </a>
         <hr>
-        <a href="">
+        <a href="" class="flex gap-3 py-1">
+            <img src="{{ asset('img/lucide_book-open-text.svg') }}" alt="">
             <p class="text-[#1C3F3A] my-2 font-medium">Panduan Pengguna</p>
         </a>
     </div>
@@ -41,6 +43,12 @@
 
         profil.addEventListener('click', () => {
             dropdown.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', (event) => {
+        if (!dropdown.contains(event.target) && !profil.contains(event.target)) {
+            dropdown.classList.add('hidden');
+            }
         });
 
     </script>

@@ -47,7 +47,7 @@
 </head>
 
 <body style="font-family: 'Montserrat', sans-serif;" class="bg-[#EBE8D8]">
-    @include('layouts.pengepul_layouts.header')
+    
     @yield('content')
 </body>
 <script>

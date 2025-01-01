@@ -13,7 +13,7 @@
     <label for="deskripsi" class="font-semibold">Alamat Pegawai</label>
     <input type="text" name="alamat" id="deskripsi" placeholder="Masukkan alamat pegawai" class="mb-4 border-0 px-8 py-2 rounded-xl">
 
-    <div class="absolute right-4 bottom-0">
+    <div class="absolute right-4 bottom-2">
         <a href="{{ route('data-pegawai') }}" class="px-16 py-3 text-[#1C3F3A] border-2 border-[#1C3F3A] font-semibold rounded-md">Batal</a>
         <button type="submit" class="px-16 py-3 bg-[#1C3F3A] font-semibold text-[#edebe4] rounded-md">Tambah</button>
     </div>
