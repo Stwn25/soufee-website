@@ -1,4 +1,4 @@
-@extends('layouts.pengepul_layouts.profil')
+@extends('layouts.petani_layouts.profil')
 
 @section('title')
     SouFee | Profil
@@ -9,7 +9,7 @@
         <div class="p-4 flex flex-col gap-2">
             
             <div class="flex gap-8 mb-4">
-                <a href="{{ route('dashboard-pengepul') }}">
+                <a href="{{ route('dashboard-petani') }}">
                     <i data-feather="arrow-left" class="cursor-pointer text-[#1C3F3A]"></i>
                 </a>
                 <p class="font-medium">Pengaturan Profil</p>
@@ -28,7 +28,7 @@
                 <p class="text-2xl font-semibold">Profil</p>
                 <p class="">Perbarui informasi profil anda</p>
                 <hr class="my-3 border-2">
-                <form action="{{ route('update-profil-pengepul', Auth::user()->id_user) }}" method="POST" class="w-full flex flex-col" enctype="multipart/form-data">
+                <form action="{{ route('update-profil-petani', Auth::user()->id_user) }}" method="POST" class="w-full flex flex-col" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
 
@@ -70,7 +70,7 @@
                 <p class="text-2xl font-semibold">Password</p>
                 <p class="">Perbarui informasi password anda</p>
                 <hr class="my-3 border-2">
-                <form action="{{ route('update-password-pengepul', Auth::user()->id_user) }}" method="POST" class="flex flex-col">
+                <form action="{{ route('update-password-petani', Auth::user()->id_user) }}" method="POST" class="flex flex-col">
                     @csrf
                     @method('PUT')
                     <label for="" class="font-semibold">Password lama</label>

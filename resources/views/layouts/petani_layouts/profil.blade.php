@@ -47,7 +47,9 @@
 </head>
 
 <body style="font-family: 'Montserrat', sans-serif;" class="bg-[#EBE8D8]">
-    @yield('content')
+    <div class="w-full absolute z-5 bottom-0 top-0 flex justify-center items-center border border-black">
+        @yield('content')
+    </div>
 </body>
 <script>
     feather.replace();

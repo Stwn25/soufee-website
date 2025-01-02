@@ -40,6 +40,7 @@ Route::middleware(['role:pengepul'])->group(function () {
     //Profile
     Route::get('/profile-pengepul', [UserController::class,'profile_pengepul'])->name('profil-pengepul');
     Route::put('/update-profile-pengepul/{user}', [UserController::class,'update_profile_pengepul_proses'])->name('update-profil-pengepul');
+    Route::put('/update-password-pengepul/{user}', [UserController::class,'update_password_pengepul_proses'])->name('update-password-pengepul');
 
     //Kapasitas
     Route::get('/create-kapasitas', [KapasitasController::class, 'create_kapasitas'])->name('create-kapasitas');
@@ -67,6 +68,11 @@ Route::middleware(['role:pengepul'])->group(function () {
 
 //Pages dengan authentikasi sebagai Petani
 Route::middleware(['role:petani'])->group(function () {
+    //Profile
+    Route::get('/profile-petani', [UserController::class,'profile_petani'])->name('profil-petani');
+    Route::put('/update-profile-petani/{user}', [UserController::class,'update_profile_petani_proses'])->name('update-profil-petani');
+    Route::put('/update-password-petani/{user}', [UserController::class,'update_password_petani_proses'])->name('update-password-petani');
+
     //Permintaan
     Route::get('/create-permintaan/{kapasitas}', [TransaksiController::class,'create_permintaan'])->name('permintaan-petani'); 
     Route::put('/create-permintaan-proses/{kapasitas}', [TransaksiController::class,'store_permintaan'])->name('permintaan-petani-proses');

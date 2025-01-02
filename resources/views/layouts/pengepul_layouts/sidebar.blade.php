@@ -1,6 +1,6 @@
         <!-- Sidebar -->
         <div class="h-full ml-2">
-            <div class="gap-3 flex flex-col sticky top-32 min-h-[82vh]">
+            <div class="gap-3 flex flex-col sticky top-32 min-h-[86vh]">
                 <h1 class="text-[#a2a2a2]" style="font-family: Montserrat, 'sans-serif';">Menu</h1>
 
                 <!-- Link Gudang -->
