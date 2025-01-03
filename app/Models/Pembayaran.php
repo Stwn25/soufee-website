@@ -18,4 +18,8 @@ class Pembayaran extends Model
     protected $fillable = [
         'jenis_pembayaran',
     ];
+
+    public function transaksis(){
+        return $this->belongsTo(Transaksi::class, 'id_transaksi', 'id_transaksi');
+    }
 }

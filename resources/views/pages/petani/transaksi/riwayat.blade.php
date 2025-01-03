@@ -5,22 +5,28 @@
     <thead>
         <tr class="border-b-2 border-[#d9d9d9]">
             <th>No.</th>
-            <th>Nama Petani</th>
             <th>Jenis Kopi</th>
             <th>Tanggal Permintaan</th>
+            <th>Tanggal Penyelesaian</th>
             <th>Jumlah Permintaan</th>
             <th>Total Harga</th>
+            <th>Status</th>
         </tr>
     </thead>
     <tbody>
         @foreach ($transaksis_selesai as $transaksi)
             <tr class="py-4 border-b-2 border-[#d9d9d9]">
                 <td>{{ $loop->iteration }}</td>
-                <td class="py-4">{{ $transaksi->users->name }}</td>
                 <td>{{ $transaksi->kapasitas->jenis_kopis->nama_jenis }}</td>
                 <td>{{ $transaksi->created_at ->format('d M Y') }}</td>
+                <td>{{ $transaksi->updated_at ->format('d M Y') }}</td>
                 <td>{{ $transaksi->jumlah_permintaan }} kg</td>
                 <td>Rp.{{ number_format($transaksi->total_harga) }}</td>
+                <td class="flex justify-center items-center py-4">
+                    <div class="flex gap-2">
+                        <p class="bg-[#1C3F3A] text-white py-2 px-3 rounded-md">Selesai</p>
+                    </div>
+                </td>
             </tr>
         @endforeach
     </tbody>

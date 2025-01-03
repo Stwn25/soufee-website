@@ -18,6 +18,7 @@ class Transaksi extends Model
         'jumlah_permintaan',
         'total_harga',
         'tanggal_penjemputan',
+        'id_pembayaran',
         'id_pegawai',
         'id_status_transaksi',
     ];
@@ -36,5 +37,9 @@ class Transaksi extends Model
 
     public function status_transaksis(){
         return $this->belongsTo(StatusTransaksi::class, 'id_status_transaksi', 'id_status_transaksi');
+    }
+
+    public function  pembayarans(){
+        return $this->hasMany(Pembayaran::class, 'id_transaksi', 'id_transaksi');
     }
 }

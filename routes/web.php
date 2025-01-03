@@ -61,6 +61,8 @@ Route::middleware(['role:pengepul'])->group(function () {
     Route::get('/transaksi-pengepul', [TransaksiController::class,'index_pengepul'])->name('transaksi-pengepul');
     Route::get('/terima-permintaan/{transaksi}', [TransaksiController::class,'terima_permintaan'])->name('terima-permintaan');
     Route::put('/terima-permintaan/{transaksi}', [TransaksiController::class,'terima_permintaan_proses'])->name('terima-permintaan-proses');
+    Route::get('/selesaikan-transaksi/{transaksi}', [TransaksiController::class,'selesaikan_transaksi'])->name('selesaikan-transaksi');
+    Route::put('/selesaikan-transaksi/{transaksi}', [TransaksiController::class,'selesaikan_transaksi_proses'])->name('selesaikan-transaksi-proses');
 
     //Riwayat
     Route::get('/riwayat-transaksi-pengepul', [TransaksiController::class,'riwayat_transaksi_pengepul'])->name('riwayat-pengepul');

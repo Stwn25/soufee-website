@@ -8,6 +8,7 @@ use App\Models\Permintaan;
 use App\Models\Kapasitas;
 use App\Models\Transaksi;
 use App\Models\Pegawai;
+use App\Models\Pembayaran;
 
 class TransaksiController extends Controller
 {
@@ -146,6 +147,23 @@ class TransaksiController extends Controller
         ]);
 
         return redirect('transaksi-pengepul')->with('success', 'Permintaan berhasil diterima!');
+    }
+
+    //Selesaikan Transaksi
+    public function selesaikan_transaksi(Transaksi $transaksi){
+        $pembayaran = Pembayaran::all();
+        return view('pages.pengepul.transaksi.selesaitransaksi', compact('transaksi', 'pembayaran'));
+    }
+
+    public function selesaikan_transaksi_proses(Request $request, Transaksi $transaksi){
+
+        $transaksi->update([
+            'id_transaksi' => $transaksi->id_transaksi,
+            'id_status_transaksi' => 3,
+            'id_pembayaran' => $request->id_pembayaran
+        ]);
+
+        return redirect('transaksi-pengepul')->with('success', 'Permintaan berhasil diselesaikan!');
     }
 
     

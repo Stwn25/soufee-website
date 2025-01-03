@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer('total_harga');
             $table->date('tanggal_penjemputan')->nullable();
             $table->bigInteger('id_pegawai')->nullable()->constrained('pegawais', 'id_pegawai')->onDelete('cascade');
+            $table->bigInteger('id_pembayaran')->nullable()->constrained('pembayarans', 'id_pembayaran')->onDelete('cascade');
             $table->bigInteger('id_status_transaksi')->constrained('status_transaksis', 'id_status_transaksi')->onDelete('cascade');
             $table->timestamps();
         });

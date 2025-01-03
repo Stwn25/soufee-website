@@ -79,8 +79,8 @@
                     <td>Rp.{{ number_format($transaksi->total_harga) }}</td>
                     <td class="flex justify-center py-4">
                         <div class="flex gap-2">
-                            <a href="">
-                                <p class="bg-[#1C3F3A] text-white py-2 px-3 rounded-md">Lihat Detail</p>
+                            <a href="{{ route('selesaikan-transaksi', $transaksi->id_transaksi) }}">
+                                <p class="bg-[#1C3F3A] text-white py-2 px-3 rounded-md">Selesaikan</p>
                             </a>
                         </div>
                     </td>
