@@ -13,14 +13,41 @@ return new class extends Migration
     {
         Schema::create('transaksis', function (Blueprint $table) {
             $table->id('id_transaksi');
-            $table->bigInteger('id_petani')->constrained('users', 'id_user')->onDelete('cascade');
-            $table->bigInteger('id_kapasitas')->constrained('kapasitass', 'id_kapasitas')->onDelete('cascade');
+            $table->unsignedBigInteger('id_petani');
+            $table->unsignedBigInteger('id_kapasitas');
             $table->integer('jumlah_permintaan');
             $table->integer('total_harga');
             $table->date('tanggal_penjemputan')->nullable();
-            $table->bigInteger('id_pegawai')->nullable()->constrained('pegawais', 'id_pegawai')->onDelete('cascade');
-            $table->bigInteger('id_pembayaran')->nullable()->constrained('pembayarans', 'id_pembayaran')->onDelete('cascade');
-            $table->bigInteger('id_status_transaksi')->constrained('status_transaksis', 'id_status_transaksi')->onDelete('cascade');
+            $table->unsignedBigInteger('id_pegawai')->nullable();
+            $table->unsignedBigInteger('id_status_transaksi');
+            $table->unsignedBigInteger('id_pembayaran')->nullable();
+
+            $table->foreign('id_petani')
+            ->references('id_user')
+            ->on('users')
+            ->onDelete('cascade');
+
+            $table->foreign('id_kapasitas')
+            ->references('id_kapasitas')
+            ->on('kapasitass')
+            ->onDelete('cascade');
+
+            $table->foreign('id_pegawai')
+            ->references('id_pegawai')
+            ->on('pegawais')
+            ->onDelete('cascade');
+
+            $table->foreign('id_pembayaran')
+            ->references('id_pembayaran')
+            ->on('pembayarans')
+            ->onDelete('cascade');
+
+            $table->foreign('id_status_transaksi')
+            ->references('id_status_transaksi')
+            ->on('status_transaksis')
+            ->onDelete('cascade');
+
+
             $table->timestamps();
         });
     }

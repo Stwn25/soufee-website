@@ -14,12 +14,22 @@ return new class extends Migration
         Schema::create('kapasitass', function (Blueprint $table) {
             $table->id('id_kapasitas');
             $table->integer('harga_per_kg');
-            $table->foreignId('id_user')->constrained('users', 'id_user')->onDelete('cascade');
-            $table->bigInteger('id_jenis_kopi')->constrained('jenis_kopis', 'id_jenis_kopi')->onDelete('cascade');
+            $table->foreignId('id_user');
+            $table->unsignedBigInteger('id_jenis_kopi');
             $table->integer('kapasitas_maksimum');
             $table->integer('kapasitas_terbaru');
             $table->string('deskripsi');
             $table->timestamps();
+
+            $table->foreign('id_jenis_kopi')
+            ->references('id_jenis_kopi')
+            ->on('jenis_kopis')
+            ->onDelete('cascade');
+
+            $table->foreign('id_user')
+            ->references('id_user')
+            ->on('users')
+            ->onDelete('cascade');
         });
     }
 
