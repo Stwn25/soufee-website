@@ -17,7 +17,9 @@ class PegawaiFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'nama' => $this->faker->unique()->randomElement(['Daffa', 'Iwan', 'Nopal', 'Aan']),
+            'no_telepon' => $this->faker->phoneNumber(),
+            'alamat' => $this->faker->address(),
         ];
     }
 }
